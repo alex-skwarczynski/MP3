@@ -134,12 +134,12 @@ function getnonvoluntary_context_switches()
 
 function getlast_cpu()
 {
-:
+    awk '{print $39}' /proc/$PID/stat;
 }
 
 function getallowed_cpus()
 {
-:
+    grep -Po "(?<=^Cpus_allowed_list:\t).*" /proc/$PID/status;
 }
 
 function getmemory_map()
