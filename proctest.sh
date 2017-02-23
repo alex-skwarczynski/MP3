@@ -19,7 +19,7 @@ fi
 
 function getpid()
 {
-
+    grep -Po "(?<=^Pid:\t).*" /proc/$PID/status
 }
 
 function getppid()
