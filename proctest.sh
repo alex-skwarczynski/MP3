@@ -144,7 +144,7 @@ function getallowed_cpus()
 
 function getmemory_map()
 {
-:
+    cat /proc/$PID/maps;
 }
 
 # Main program here
