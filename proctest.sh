@@ -59,62 +59,62 @@ function getfsgid()
 
 function getstate()
 {
-:
+    grep -Po "(?<=^State:\t).*" /proc/$PID/status;
 }
 
 function getthread_count()
-{
- :   
+{  
+    grep -Po "(?<=^Threads:\t).*" /proc/$PID/status;
 }
 
 function getpriority()
 {
-:
+    awk '{print $18}' /proc/$PID/stat;
 }
 
 function getniceness()
 {
-:
+    awk '{print $19}' /proc/$PID/stat;
 }
 
 function getstime()
 {
-:
+    awk '{print $15}' /proc/$PID/stat;
 }
 
 function getutime()
 {
-:
+    awk '{print $14}' /proc/$PID/stat;
 }
 
 function getcstime()
 {
-:
+    awk '{print $17}' /proc/$PID/stat;
 }
 
 function getcutime()
 {
-:
+    awk '{print $16}' /proc/$PID/stat;
 }
 
 function getstartcode()
 {
-:
+    awk '{print $26}' /proc/$PID/stat;
 }
 
 function getendcode()
 {
-:
+    awk '{print $27}' /proc/$PID/stat;
 }
 
 function getesp()
 {
-:
+    awk '{print $29}' /proc/$PID/stat;
 }
 
 function geteip()
 { 
-:
+    awk '{print $30}' /proc/$PID/stat;
 }
 
 function getfiles()
@@ -124,12 +124,12 @@ function getfiles()
 
 function getvoluntary_context_switches()
 {
-:
+    grep -Po "(?<=^voluntary_ctxt_switches:\t).*" /proc/$PID/status;
 }
 
 function getnonvoluntary_context_switches()
 {
-:
+    grep -Po "(?<=^nonvoluntary_ctxt_switches:\t).*" /proc/$PID/status;
 }
 
 function getlast_cpu()
