@@ -19,132 +19,132 @@ fi
 
 function getpid()
 {
-    grep -Po "(?<=^Pid:\t).*" /proc/$PID/status
+    grep -Po "(?<=^Pid:\t).*" /proc/$PID/status;
 }
 
 function getppid()
 {
-
+:
 }
 
 function geteuid()
 {
-
+:
 }
 
 function getegid()
 {
-
+:
 }
 
 function getruid()
 {
-    
+ :   
 }
 
 function getrgid()
 {
-
+:
 }
 
 function getfsuid()
 {
-
+:
 }
 
 function getfsgid()
 {
-
+:
 }
 
 function getstate()
 {
-
+:
 }
 
 function getthread_count()
 {
-    
+ :   
 }
 
 function getpriority()
 {
-
+:
 }
 
 function getniceness()
 {
-
+:
 }
 
 function getstime()
 {
-
+:
 }
 
 function getutime()
 {
-
+:
 }
 
 function getcstime()
 {
-
+:
 }
 
 function getcutime()
 {
-
+:
 }
 
 function getstartcode()
 {
-
+:
 }
 
 function getendcode()
 {
-
+:
 }
 
 function getesp()
 {
-
+:
 }
 
 function geteip()
 { 
-
+:
 }
 
 function getfiles()
 {
-
+:
 }
 
 function getvoluntary_context_switches()
 {
-
+:
 }
 
 function getnonvoluntary_context_switches()
 {
-
+:
 }
 
 function getlast_cpu()
 {
-
+:
 }
 
 function getallowed_cpus()
 {
-
+:
 }
 
 function getmemory_map()
 {
-
+:
 }
 
 # Main program here
