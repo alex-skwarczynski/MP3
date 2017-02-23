@@ -24,37 +24,37 @@ function getpid()
 
 function getppid()
 {
-:
+    grep -Po "(?<=^PPid:\t).*" /proc/$PID/status;
 }
 
 function geteuid()
 {
-:
+    grep -Po "(?<=^Uid:\t).*" /proc/$PID/status | cut -f2;   
 }
 
 function getegid()
 {
-:
+    grep -Po "(?<=^Gid:\t).*" /proc/$PID/status | cut -f2;   
 }
 
 function getruid()
 {
- :   
+    grep -Po "(?<=^Uid:\t).*" /proc/$PID/status | cut -f1;   
 }
 
 function getrgid()
 {
-:
+    grep -Po "(?<=^Gid:\t).*" /proc/$PID/status | cut -f1;   
 }
 
 function getfsuid()
 {
-:
+    grep -Po "(?<=^Uid:\t).*" /proc/$PID/status | cut -f4;   
 }
 
 function getfsgid()
 {
-:
+    grep -Po "(?<=^Gid:\t).*" /proc/$PID/status | cut -f4;   
 }
 
 function getstate()
