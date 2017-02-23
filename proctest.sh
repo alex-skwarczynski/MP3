@@ -119,7 +119,7 @@ function geteip()
 
 function getfiles()
 {
-:
+    ls /proc/$PID/fdinfo | wc -l;
 }
 
 function getvoluntary_context_switches()
